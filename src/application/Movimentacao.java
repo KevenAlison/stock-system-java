@@ -3,13 +3,15 @@ package application;
 import java.util.Date;
 
 public class Movimentacao {
+	private static int contId = 0;
+	
     private int idMovimentacao;
     private TipoMovimentacao tipo;
     private Date date;
     
 	public Movimentacao(int idMovimentacao, TipoMovimentacao tipo, Date date) {
 		super();
-		this.idMovimentacao = idMovimentacao;
+		this.idMovimentacao = ++contId;
 		this.tipo = tipo;
 		this.date = date;
 	}

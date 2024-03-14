@@ -1,6 +1,7 @@
 package application;
 
 public class Produto {
+	private static int contId = 0;
 	
 	private int idProduto;
 	private String nome;
@@ -10,7 +11,7 @@ public class Produto {
 	
 	public Produto(int idProduto, String nome, String descricao, float precoCusto, float precoVenda) {
 		super();
-		this.idProduto = idProduto;
+		this.idProduto = ++contId;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.precoCusto = precoCusto;

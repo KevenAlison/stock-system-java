@@ -1,6 +1,7 @@
 package application;
 
 public class EstoqueProduto {
+	private static int contId = 0;
 	
 	private int idEstoqueProduto;
 	private Produto produto;
@@ -9,7 +10,7 @@ public class EstoqueProduto {
 	
 	public EstoqueProduto(int idEstoqueProduto, Produto produto, int qntEstoque, Movimentacao movimentacao) {
 		super();
-		this.idEstoqueProduto = idEstoqueProduto;
+		this.idEstoqueProduto = ++contId;;
 		this.produto = produto;
 		this.qntEstoque = qntEstoque;
 		this.movimentacao = movimentacao;
@@ -18,18 +19,18 @@ public class EstoqueProduto {
 	public void realizarCompra(int qntComprada) {
 		if (qntComprada > 0) {
 			this.qntEstoque += qntComprada;
-			System.out.println(qntComprada + " unidades do produto " + produto.getNome() + " foram adicionadas ao estoque.");
+			System.out.println(qntComprada + " " + produto.getNome() + " foram adicionadas ao estoque.");
 		} else {
-			System.out.println("Quantidade inválida para compra.");
+			System.out.println("Quantidade de compra inválida.");
 		}
 	}
 	
 	public void realizarVenda(int qntVendida) {
 		if (qntVendida > 0 && qntVendida <= qntEstoque) {
 			this.qntEstoque -= qntVendida;
-			System.out.println(qntVendida + " unidades do produto " + produto.getNome() + " foram vendidas.");
+			System.out.println(qntVendida + " " + produto.getNome() + " foram vendidas.");
 		} else {
-			System.out.println("Quantidade inválida para venda ou estoque insuficiente.");
+			System.out.println("Quantidade de venda inválida, consultar estoque.");
 		}
 	}
 	

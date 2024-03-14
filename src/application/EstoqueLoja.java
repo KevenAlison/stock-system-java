@@ -1,13 +1,15 @@
 package application;
 
 public class EstoqueLoja {
+	private static int contId = 0;
+	
 	private int idEstoqueLoja;
 	private EstoqueProduto estoqueProduto;
 	private Movimentacao Movimentacao;
 	
-	public EstoqueLoja(int idEstoqueLoja, EstoqueProduto estoqueProduto, application.Movimentacao movimentacao) {
+	public EstoqueLoja(EstoqueProduto estoqueProduto, application.Movimentacao movimentacao) {
 		super();
-		this.idEstoqueLoja = idEstoqueLoja;
+		this.idEstoqueLoja = ++contId;
 		this.estoqueProduto = estoqueProduto;
 		Movimentacao = movimentacao;
 	}
