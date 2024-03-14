@@ -9,7 +9,7 @@ public class Movimentacao {
     private TipoMovimentacao tipo;
     private Date date;
     
-	public Movimentacao(int idMovimentacao, TipoMovimentacao tipo, Date date) {
+	public Movimentacao(TipoMovimentacao tipo, Date date) {
 		super();
 		this.idMovimentacao = ++contId;
 		this.tipo = tipo;

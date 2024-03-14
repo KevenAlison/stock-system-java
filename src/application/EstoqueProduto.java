@@ -1,5 +1,7 @@
 package application;
 
+import java.util.Date;
+
 public class EstoqueProduto {
 	private static int contId = 0;
 	
@@ -8,12 +10,13 @@ public class EstoqueProduto {
 	private int qntEstoque;
 	private Movimentacao movimentacao;
 	
-	public EstoqueProduto(int idEstoqueProduto, Produto produto, int qntEstoque, Movimentacao movimentacao) {
+	public EstoqueProduto(Produto produto, int qntEstoque, Movimentacao movimentacao) {
 		super();
-		this.idEstoqueProduto = ++contId;;
+		this.idEstoqueProduto = ++contId;
 		this.produto = produto;
 		this.qntEstoque = qntEstoque;
-		this.movimentacao = movimentacao;
+        
+        movimentacao = new Movimentacao(TipoMovimentacao.ENTRADA, new Date());
 	}
 
 	public void realizarCompra(int qntComprada) {

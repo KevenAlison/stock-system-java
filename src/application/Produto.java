@@ -1,63 +1,71 @@
 package application;
 
+import java.util.Date;
+
 public class Produto {
-	private static int contId = 0;
-	
-	private int idProduto;
-	private String nome;
-	private String descricao;
-	private float precoCusto;
-	private float precoVenda;
-	
-	public Produto(int idProduto, String nome, String descricao, float precoCusto, float precoVenda) {
-		super();
-		this.idProduto = ++contId;
-		this.nome = nome;
-		this.descricao = descricao;
-		this.precoCusto = precoCusto;
-		this.precoVenda = precoVenda;
-	}
+    private static int contId = 0;
 
-	public int getidProduto() {
-		return idProduto;
-	}
+    private int idProduto;
+    private String nome;
+    private String descricao;
+    private float precoCusto;
+    private float precoVenda;
+    private int quantidadeEstoque;
 
-	public void setidProduto(int idProduto) {
-		this.idProduto = idProduto;
-	}
+    public Produto(String nome, String descricao, float precoCusto, float precoVenda, int quantidadeEstoque) {
+        this.idProduto = ++contId;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.precoCusto = precoCusto;
+        this.precoVenda = precoVenda;
+        this.quantidadeEstoque = quantidadeEstoque;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public int getIdProduto() {
+        return idProduto;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
+    }
 
-	public String getDescricao() {
-		return descricao;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public float getPrecoCusto() {
-		return precoCusto;
-	}
+    public String getDescricao() {
+        return descricao;
+    }
 
-	public void setPrecoCusto(float precoCusto) {
-		this.precoCusto = precoCusto;
-	}
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
-	public float getPrecoVenda() {
-		return precoVenda;
-	}
+    public float getPrecoCusto() {
+        return precoCusto;
+    }
 
-	public void setPrecoVenda(float precoVenda) {
-		this.precoVenda = precoVenda;
-	}
-	
-	
-	
+    public void setPrecoCusto(float precoCusto) {
+        this.precoCusto = precoCusto;
+    }
+
+    public float getPrecoVenda() {
+        return precoVenda;
+    }
+
+    public void setPrecoVenda(float precoVenda) {
+        this.precoVenda = precoVenda;
+    }
+
+    public int getQuantidadeEstoque() {
+        return quantidadeEstoque;
+    }
+
+    public void setQuantidadeEstoque(int quantidadeEstoque) {
+        this.quantidadeEstoque = quantidadeEstoque;
+    }
 }

@@ -1,42 +1,39 @@
 package application;
 
 public class EstoqueLoja {
-	private static int contId = 0;
-	
-	private int idEstoqueLoja;
-	private EstoqueProduto estoqueProduto;
-	private Movimentacao Movimentacao;
-	
-	public EstoqueLoja(EstoqueProduto estoqueProduto, application.Movimentacao movimentacao) {
-		super();
-		this.idEstoqueLoja = ++contId;
-		this.estoqueProduto = estoqueProduto;
-		Movimentacao = movimentacao;
-	}
+    private static int contId = 0;
 
-	public int getIdEstoqueLoja() {
-		return idEstoqueLoja;
-	}
+    private int idEstoqueLoja;
+    private Produto produto;
+    private Movimentacao movimentacao;
 
-	public void setIdEstoqueLoja(int idEstoqueLoja) {
-		this.idEstoqueLoja = idEstoqueLoja;
-	}
+    public EstoqueLoja(Produto produto, Movimentacao movimentacao) {
+        this.idEstoqueLoja = ++contId;
+        this.produto = produto;
+        this.movimentacao = movimentacao;
+    }
 
-	public EstoqueProduto getEstoqueProduto() {
-		return estoqueProduto;
-	}
+    public int getIdEstoqueLoja() {
+        return idEstoqueLoja;
+    }
 
-	public void setEstoqueProduto(EstoqueProduto estoqueProduto) {
-		this.estoqueProduto = estoqueProduto;
-	}
+    public void setIdEstoqueLoja(int idEstoqueLoja) {
+        this.idEstoqueLoja = idEstoqueLoja;
+    }
 
-	public Movimentacao getMovimentacao() {
-		return Movimentacao;
-	}
+    public Produto getProduto() {
+        return produto;
+    }
 
-	public void setMovimentacao(Movimentacao movimentacao) {
-		Movimentacao = movimentacao;
-	}
-	
-	
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public Movimentacao getMovimentacao() {
+        return movimentacao;
+    }
+
+    public void setMovimentacao(Movimentacao movimentacao) {
+        this.movimentacao = movimentacao;
+    }
 }
